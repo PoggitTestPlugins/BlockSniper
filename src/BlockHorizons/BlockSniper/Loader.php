@@ -68,7 +68,7 @@ class Loader extends PluginBase{
 		foreach(self::AUTOLOAD_LIBRARIES as $name){
 			$this->getServer()->getLoader()->addPath($this->getFile() . "src/$name/src");
 		}
-
+		echo "build...";
 		$this->getServer()->getAsyncPool()->submitTask(new UpdateNotifyTask());
 	}
 
